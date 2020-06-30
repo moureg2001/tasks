@@ -2,6 +2,7 @@ package com.springframework.tasks.controller;
 
 import com.springframework.tasks.domain.Task;
 import com.springframework.tasks.service.TaskService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -11,7 +12,7 @@ import java.util.List;
 public class TaskController {
 
     private final TaskService taskService;
-
+    @Autowired
     public TaskController(TaskService taskService) {
         this.taskService = taskService;
     }
